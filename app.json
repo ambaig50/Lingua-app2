@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "LinguaApp",
+    "slug": "lingua-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A6EBD"
+      },
+      "package": "com.yourname.linguaapp",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-camera", { "cameraPermission": "Allow LinguaApp to access your camera to scan text." }],
+      ["expo-image-picker", { "photosPermission": "Allow LinguaApp to access your photos for text scanning." }]
+    ],
+    "experiments": { "typedRoutes": true },
+    "extra": {
+      "router": { "origin": false },
+      "eas": { "projectId": "PASTE-YOUR-PROJECT-ID-HERE" }
+    }
+  }
+}
